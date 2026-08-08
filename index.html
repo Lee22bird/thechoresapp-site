@@ -42,6 +42,16 @@
           font-weight:800; font-size:14px; padding:12px 22px; border-radius:99px; }
   .hero-img-mobile { display:none; }
 
+  .trust { width:min(900px, calc(100% - 48px)); margin:0 auto; padding:34px 38px;
+           display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:start;
+           background:#FBF1DD; border-radius:26px; }
+  .trust-mark { width:48px; height:48px; display:flex; align-items:center; justify-content:center;
+                border-radius:16px; background:var(--gold); color:var(--slate); font-size:22px; font-weight:800; }
+  .trust h2 { margin:0 0 8px; font-family:'Baloo 2',cursive; font-size:28px; line-height:1.1; }
+  .trust p { margin:0; color:var(--secondary); font-size:15px; line-height:1.6; }
+  .trust a { display:inline-block; margin-top:13px; color:var(--sage-deep); font-size:14px; font-weight:800; text-decoration:none; }
+  .trust a:hover { text-decoration:underline; }
+
   .topnav { position:absolute; top:0; left:0; right:0; z-index:2; display:flex; align-items:center;
             justify-content:space-between; max-width:1140px; margin:auto; padding:24px 36px; }
   .topnav .brand { color:var(--slate); font-family:'Baloo 2',cursive; font-size:22px; font-weight:800;
@@ -65,6 +75,8 @@
     .icon { margin-left:auto; margin-right:auto; }
     h1 { font-size:46px; }
     .hero-img-mobile { display:block; width:100%; max-width:640px; margin:8px auto 0; }
+    .trust { width:calc(100% - 32px); grid-template-columns:1fr; gap:14px; padding:28px 24px; }
+    .trust-mark { width:42px; height:42px; }
   }
 </style>
 </head>
@@ -83,6 +95,14 @@
       </div>
       <img class="hero-img-mobile" src="images/hero.jpg"
            alt="The Chores app on an iPhone: a family's chore list with avatars for each member, checked-off chores, and a gold reward coin.">
+    </div>
+  </section>
+  <section class="trust" aria-labelledby="trust-heading">
+    <div class="trust-mark" aria-hidden="true">♥</div>
+    <div>
+      <h2 id="trust-heading">A small fee keeps the app honest.</h2>
+      <p>We charge a small monthly fee because we do not sell your private family data. Your subscription helps cover hosting, support, and ongoing development so we can keep The Chores functional and sustainable—without ads, data brokers, or trying to get rich from your information.</p>
+      <a href="privacy.html">Read our privacy promise →</a>
     </div>
   </section>
   <footer>
