@@ -14,29 +14,54 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--cream); color:var(--slate); font-family:'Nunito',sans-serif;
-         min-height:100svh; display:flex; flex-direction:column; align-items:center;
-         text-align:center; padding:72px 24px 40px; }
-  .icon { width:88px; height:88px; background:var(--sage); border-radius:26px;
+         min-height:100svh; display:flex; flex-direction:column; }
+
+  .hero { position:relative; display:flex; align-items:center; min-height:min(86svh, 760px);
+          background:
+            linear-gradient(90deg, var(--cream) 0%, rgba(250,247,240,.9) 30%, rgba(250,247,240,0) 52%),
+            url(images/hero.jpg) right center / cover no-repeat; }
+  .hero-inner { width:100%; max-width:1140px; margin:0 auto; padding:56px 36px; }
+  .hero-copy { max-width:400px; }
+  .icon { width:76px; height:76px; background:var(--sage); border-radius:23px;
           display:flex; align-items:center; justify-content:center;
-          box-shadow:0 10px 26px rgba(120,150,133,.34); margin-bottom:26px;
-          font-family:'Baloo 2',cursive; font-weight:800; font-size:48px; color:var(--cream); }
-  h1 { font-family:'Baloo 2',cursive; font-weight:800; font-size:52px; letter-spacing:-.015em; line-height:1.05; }
-  h1 .the { display:block; font-size:22px; font-weight:700; }
+          box-shadow:0 10px 26px rgba(120,150,133,.34); margin-bottom:24px;
+          font-family:'Baloo 2',cursive; font-weight:800; font-size:42px; color:var(--cream); }
+  h1 { font-family:'Baloo 2',cursive; font-weight:800; font-size:58px; letter-spacing:-.015em; line-height:1.02; }
+  h1 .the { display:block; font-size:24px; font-weight:700; }
   h1 .o { display:inline-flex; width:.62em; height:.62em; background:var(--gold); border-radius:50%;
           align-items:center; justify-content:center; color:var(--cream); font-size:.34em; vertical-align:-.02em; }
-  .tagline { margin:18px auto 0; max-width:340px; font-size:17px; font-weight:600; color:var(--secondary); line-height:1.55; }
-  .soon { margin-top:30px; display:inline-block; background:#FBF1DD; color:var(--gold-deep);
+  .tagline { margin-top:18px; font-size:17.5px; font-weight:600; color:var(--secondary); line-height:1.55; }
+  .soon { margin-top:28px; display:inline-block; background:#FBF1DD; color:var(--gold-deep);
           font-weight:800; font-size:14px; padding:12px 22px; border-radius:99px; }
-  footer { margin-top:auto; padding-top:56px; font-size:13.5px; font-weight:700; color:var(--secondary); }
+  .hero-img-mobile { display:none; }
+
+  footer { padding:34px 24px 40px; text-align:center; font-size:13.5px; font-weight:700; color:var(--secondary); }
   footer a { color:var(--sage-deep); text-decoration:none; margin:0 8px; }
   footer a:hover { text-decoration:underline; }
+
+  @media (max-width: 860px) {
+    .hero { background:var(--cream); min-height:0; }
+    .hero-inner { padding:56px 24px 8px; }
+    .hero-copy { max-width:420px; margin:0 auto; text-align:center; }
+    .icon { margin-left:auto; margin-right:auto; }
+    h1 { font-size:46px; }
+    .hero-img-mobile { display:block; width:100%; max-width:640px; margin:8px auto 0; }
+  }
 </style>
 </head>
 <body>
-  <div class="icon">C</div>
-  <h1><span class="the">The</span>Ch<span class="o">✓</span>res</h1>
-  <p class="tagline">One list the whole house can see. Chores get done, kids get paid, nobody has to nag.</p>
-  <span class="soon">Coming soon to the App&nbsp;Store</span>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="icon">C</div>
+        <h1><span class="the">The</span>Ch<span class="o">✓</span>res</h1>
+        <p class="tagline">One list the whole house can see. Chores get done, kids get paid, nobody has to nag.</p>
+        <span class="soon">Coming soon to the App&nbsp;Store</span>
+      </div>
+      <img class="hero-img-mobile" src="images/hero.jpg"
+           alt="The Chores app on an iPhone: a family's chore list with avatars for each member, checked-off chores, and a gold reward coin.">
+    </div>
+  </section>
   <footer>
     <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a>
     <div style="margin-top:10px">© 2026 The Chores</div>
