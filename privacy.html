@@ -46,6 +46,9 @@
     are handled by our authentication provider and are never visible to us.</li>
     <li><strong>Household details.</strong> Your household name and the first names or nicknames,
     optional ages, and sign-in PINs of the members a parent adds.</li>
+    <li><strong>Profile photos (optional).</strong> If a family member chooses a profile photo, we
+    store it so it can appear on their avatar. Photos are optional — the app works fully without
+    them, using a colored initial instead.</li>
     <li><strong>Chore and allowance records.</strong> The chores you create, completions,
     balances, and cash-out history.</li>
   </ul>
@@ -54,13 +57,18 @@
   <h2>Children's privacy</h2>
   <p>Child profiles are created and controlled entirely by a parent. Children do not register
   themselves, have no email accounts with us, and sign in only with a PIN inside their parent's
-  household. The only information about a child we hold is what their parent chooses to enter.
-  Parents can edit or delete a child's profile — and everything recorded under it — at any time.</p>
+  household. The only information about a child we hold is what their parent chooses to enter.</p>
+  <p><strong>A note on children's photos.</strong> A profile photo for a child is optional and is
+  added by, or with the permission of, the child's parent. Photos are stored privately and are
+  visible only to members of that child's own household — never to other users, never publicly,
+  and never used for any purpose other than showing the avatar. A parent can remove a child's
+  photo, profile, and all associated data at any time.</p>
 
   <h2>Where your data lives</h2>
-  <p>Data is stored with our database provider, Supabase, on servers in the United States, and is
-  encrypted in transit. Access is restricted by per-household security rules: members of one
-  household can never see another household's data, and children can only see their own lists.</p>
+  <p>Data and photos are stored with our infrastructure provider, Supabase, on servers in the
+  United States, and are encrypted in transit. Access is restricted by per-household security
+  rules enforced at the database level: members of one household can never see another household's
+  data or photos, and children can only see their own lists.</p>
 
   <h2>What we never do</h2>
   <ul>
