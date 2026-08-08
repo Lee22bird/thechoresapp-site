@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Chores — chores get done, kids get paid</title>
 <meta name="description" content="The Chores is a shared household chore and allowance app for families. One list the whole house can see.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thechoresapp.net/">
+<meta property="og:title" content="The Chores — chores get done, kids get paid">
+<meta property="og:description" content="One shared household chore list for calmer families.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thechoresapp.net/">
+<meta property="og:image" content="https://thechoresapp.net/images/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -35,11 +42,23 @@
           font-weight:800; font-size:14px; padding:12px 22px; border-radius:99px; }
   .hero-img-mobile { display:none; }
 
+  .topnav { position:absolute; top:0; left:0; right:0; z-index:2; display:flex; align-items:center;
+            justify-content:space-between; max-width:1140px; margin:auto; padding:24px 36px; }
+  .topnav .brand { color:var(--slate); font-family:'Baloo 2',cursive; font-size:22px; font-weight:800;
+                   letter-spacing:-.02em; text-decoration:none; }
+  .topnav .brand span { color:var(--gold-deep); }
+  .topnav nav { display:flex; gap:22px; align-items:center; }
+  .topnav nav a { color:var(--sage-deep); font-size:14px; font-weight:800; text-decoration:none; }
+  .topnav nav a:hover { text-decoration:underline; }
+  .journal-link { background:#fff; border-radius:99px; padding:10px 16px; box-shadow:0 2px 10px rgba(47,58,61,.08); }
+
   footer { padding:34px 24px 40px; text-align:center; font-size:13.5px; font-weight:700; color:var(--secondary); }
   footer a { color:var(--sage-deep); text-decoration:none; margin:0 8px; }
   footer a:hover { text-decoration:underline; }
 
   @media (max-width: 860px) {
+    .topnav { padding:18px 20px; }
+    .topnav nav a:not(.journal-link) { display:none; }
     .hero { background:var(--cream); min-height:0; }
     .hero-inner { padding:56px 24px 8px; }
     .hero-copy { max-width:420px; margin:0 auto; text-align:center; }
@@ -50,6 +69,10 @@
 </style>
 </head>
 <body>
+  <header class="topnav">
+    <a class="brand" href="index.html">The <span>Chores</span></a>
+    <nav aria-label="Main navigation"><a href="support.html">Support</a><a class="journal-link" href="blog.html">Family journal&nbsp; →</a></nav>
+  </header>
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
@@ -63,7 +86,7 @@
     </div>
   </section>
   <footer>
-    <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a>
+    <a href="blog.html">Family journal</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a>
     <div style="margin-top:10px">© 2026 The Chores</div>
   </footer>
 </body>
