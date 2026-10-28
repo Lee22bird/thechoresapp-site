@@ -1,0 +1,35 @@
+/* Shift Clock pages — the app's own look (charcoal + teal), separate from The Chores. */
+:root {
+  --bg: #161616;
+  --surface: #1E1E1E;
+  --border: #2A2A2A;
+  --text: #FFFFFF;
+  --text-2: #D1D5DB;
+  --text-3: #9CA3AF;
+  --accent: #22D3EE;
+  --on-accent: #161616;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Barlow', system-ui, sans-serif; line-height: 1.6; }
+main { max-width: 640px; margin: 0 auto; padding: 48px 16px 80px; }
+a { color: var(--accent); }
+.back { display: inline-block; margin-bottom: 28px; font-weight: 700; font-size: 15px; text-decoration: none; }
+
+.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.brand img { width: 64px; height: 64px; border-radius: 15px; }
+h1 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.15; }
+h1 .teal { color: var(--accent); }
+.lede { font-size: 18px; color: var(--text-2); margin-bottom: 8px; }
+.updated { color: var(--text-3); font-size: 14px; font-weight: 600; margin: 4px 0 28px; }
+
+h2 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 21px; margin: 34px 0 10px; }
+h3 { font-size: 16px; font-weight: 700; margin: 20px 0 4px; }
+p, li { font-size: 16px; color: var(--text-2); }
+ul { padding-left: 22px; margin: 8px 0; }
+li { margin: 4px 0; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px 22px; margin-top: 18px; }
+.card h2 { margin-top: 0; }
+.email { display: inline-block; margin-top: 6px; font-size: 18px; font-weight: 700; }
+.note { color: var(--text-3); font-size: 14px; margin-top: 36px; }
+footer { color: var(--text-3); font-size: 14px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
